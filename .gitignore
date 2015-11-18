@@ -8,3 +8,8 @@ objs/
 # root Makefile
 ./Makefile
 
+# global tags
+GPATH
+GTAGS
+GRTAGS
+
