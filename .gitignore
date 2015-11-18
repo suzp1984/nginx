@@ -1,0 +1,10 @@
+# Emacs backup file
+*~
+
+# object file
+objs/
+*.o
+
+# root Makefile
+./Makefile
+
