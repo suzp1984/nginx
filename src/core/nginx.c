@@ -265,6 +265,10 @@ main(int argc, char *const *argv)
         ngx_modules[i]->index = ngx_max_module++;
     }
 
+    // Add debug log
+    ngx_log_error(NGX_LOG_DEBUG, init_cycle.log, 0,
+                  "Before ngx_init_cycle");
+
     cycle = ngx_init_cycle(&init_cycle);
     if (cycle == NULL) {
         if (ngx_test_config) {
@@ -274,6 +278,10 @@ main(int argc, char *const *argv)
 
         return 1;
     }
+
+    // Add debug log
+    ngx_log_error(NGX_LOG_DEBUG, cycle->log, 0,
+                  "After ngx_init_cycle");
 
     if (ngx_test_config) {
         if (!ngx_quiet_mode) {
